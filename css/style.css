@@ -1,0 +1,151 @@
+:root{
+  --white: #ffffff;
+  --black-1: #202020;
+  --primary: #1b90fc;
+  --grey: #929292;
+  --headline1: 700 2.5rem/normal 'Roboto' Condensed;
+  --subtitle1: 700 1.625rem/1.5rem 'Roboto' Condensed;
+  --button: 700 0.875rem/1rem 'Roboto';
+  --headline2: 700 1.5rem/normal 'Roboto' Condensed;
+  --body1-regular: 400 1rem/1.5rem 'Roboto';
+  --body1-bold: 700 1rem/1.5rem 'Roboto';
+  --body2-bold: 700 0.875rem/1.5rem 'Roboto';
+  --body2-regular: 400 0.875rem/1.5rem 'Roboto';
+  --caption-regular: 400 0.75rem/1.5rem 'Roboto';
+  --caption-bold: 700 0.75rem/1.5rem 'Roboto';
+}
+
+.wrapper{
+  background: url('../img/loki.png') no-repeat center ;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0%, 100% 84%, 0% 100%);
+  min-block-size: 100vh;
+  display: flex;
+}
+
+
+.img-w{
+  display: none;
+}
+
+.body{
+  color: var(--white);
+  font: var(--body1-regular);
+  margin: 0%;
+}
+
+
+.hero-descrip {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+  background: var(--black-1);
+  align-items: flex-start;
+  justify-content: center;
+  inline-size: 60%;
+  padding-inline-start: 7rem;
+}
+
+.title{
+  max-inline-size: 37.5rem;
+}
+
+.title p:nth-child(1){
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  margin: 0;
+}
+
+.button{
+ border: none;
+ background: var(--primary);
+ padding: 1rem;
+ border-radius: 4.16rem;
+ color: var(--white);
+ font: var(--button);
+ text-transform: uppercase;
+ cursor: pointer;
+}
+
+.button:active{
+  transform: scale(.9);
+}
+
+
+@media (min-width: 1920px) {
+
+.wrapper{
+  background: url('../img/loki.png') no-repeat center ;
+  background-size: cover;
+  }
+
+.hero-descrip {
+    padding-inline-start: 10rem;
+  }
+}
+
+@media (max-width: 1440px) {
+.wrapper{
+  background: url('../img/loki2.png') no-repeat center;
+  background-size: cover;
+  }
+
+  .hero-descrip {
+  padding-inline-start: 5rem;
+  }
+
+  .title{
+    max-inline-size: 34rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+  }
+
+
+  .hero-descrip {
+    flex: 1;
+    clip-path: none;
+    inline-size: auto;
+    min-block-size:28rem;
+    justify-content: flex-start;
+    padding-block-start: 3.33rem;
+    padding-inline-start: 5rem;
+
+  }
+
+  .title{
+    max-inline-size: 30.5rem;
+  }
+
+  .img-w{
+    display: block;
+    block-size: 50%;
+    inline-size:100%;
+    max-block-size: 48rem;
+  }
+
+  .button{
+    display: block;
+    width: 90%;
+  }
+
+}
+
+
+@media (max-width: 360px) {
+  .hero-descrip {
+    padding-inline-start: 2rem;
+
+  }
+}
+
